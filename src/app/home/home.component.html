@@ -1,0 +1,27 @@
+<div>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of userData; let i = index" >
+             <td>{{i+1}}</td>
+             <td>{{user.name}}</td>
+             <td>{{user.email}}</td>
+             <td>{{user.age}}</td>
+             <td>
+                <button class="btn btn-danger" (click)="deleteUser(i)">Delete</button>
+             </td>
+             </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-info" (click)="goBack()">Back</button>
+</div>
